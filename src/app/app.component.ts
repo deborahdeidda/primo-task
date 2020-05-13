@@ -7,17 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Primo task - Button';
-
-  btnConfig = {
-    styles: {
-      position: 'relative',
-      width: '100px',
-      height: '40px',
-      backgroundColor: '#eda6c0',
-      color: 'black',
-      fontSize: '15px'
-    },
-    text: 'Button'
-  };
-
 }

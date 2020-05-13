@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Button } from './button-mock';
 
 @Component({
   selector: 'app-button',
@@ -6,7 +7,26 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Input() buttonConfig: any;
+
+   @Input() configButton: Button = {
+    class: 'btn-class',
+    name: 'btn-name',
+    type: 'button'
+  };
+
+  imageBtn = {
+    src: './assets/envelope.png',
+    class: 'img-class'
+  }
+
+
+
+
+
+
+
+
+
 
   constructor() { }
 
