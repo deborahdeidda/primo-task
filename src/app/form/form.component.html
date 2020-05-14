@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<div class="container">
+    <h1>Form</h1>
+
+      <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+        <div class="form-group">
+          <label for="class">Class</label>
+          <input [(ngModel)]="class" name="class" type="text" class="form-control" id="class" placeholder="Class">
+        </div><br>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input [(ngModel)]="name" name="name" type="text" class="form-control" id="name" placeholder="Name">
+        </div><br>
+
+        <div class="form-group">
+          <label for="type">Type</label>
+          <input [(ngModel)]="type" name="type" type="text" class="form-control" id="type" placeholder="Type">
+        </div><br>
+
+        <a href="#"><button type=submit class="btn">Send data</button></a>
+      </form>
+
+      {{formData.value | json}}
+
+</div>

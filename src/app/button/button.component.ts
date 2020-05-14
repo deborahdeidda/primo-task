@@ -8,6 +8,8 @@ import { Button } from './button';
 })
 export class ButtonComponent implements OnInit {
 
+  title = 'Primo Task: Button'
+
    @Input() configButton: Button = {
     class: 'btn-class',
     name: 'btn-name',
