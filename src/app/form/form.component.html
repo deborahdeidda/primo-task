@@ -5,22 +5,20 @@
       <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
         <div class="form-group">
           <label for="class">Class</label>
-          <input [(ngModel)]="class" name="class" type="text" class="form-control" id="class" placeholder="Class">
+          <input [(ngModel)]="form.class" name="class" type="text" class="form-control" id="class" placeholder={{form.class}}>
         </div><br>
 
         <div class="form-group">
           <label for="name">Name</label>
-          <input [(ngModel)]="name" name="name" type="text" class="form-control" id="name" placeholder="Name">
+          <input [(ngModel)]="form.name" name="name" type="text" class="form-control" id="name" placeholder={{form.name}}>
         </div><br>
 
         <div class="form-group">
           <label for="type">Type</label>
-          <input [(ngModel)]="type" name="type" type="text" class="form-control" id="type" placeholder="Type">
+          <input [(ngModel)]="form.type" name="type" type="text" class="form-control" id="type" placeholder={{form.type}}>
         </div><br>
 
-        <a href="#"><button type=submit class="btn">Send data</button></a>
+        <a href={{form.href}}><button type=submit class="btn">Send data</button></a>
       </form>
-
-      {{formData.value | json}}
 
 </div>

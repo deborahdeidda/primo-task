@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Button } from './button';
+
+import { FormComponent } from '../form/form.component';
+
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-button',
@@ -10,6 +15,8 @@ export class ButtonComponent implements OnInit {
 
   title = 'Primo Task: Button'
 
+  @Input() form: FormComponent;
+
    @Input() configButton: Button = {
     class: 'btn-class',
     name: 'btn-name',
@@ -17,7 +24,7 @@ export class ButtonComponent implements OnInit {
     icon: 'fab fa-angular fa-4x'
   };
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

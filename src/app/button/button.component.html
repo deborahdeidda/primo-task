@@ -1,2 +1,9 @@
 <h1>{{title}}</h1>
 <a href="#"><button class = {{configButton.class}} name = {{configButton.name}} type = {{configButton.type}} ><i class= {{configButton.icon}}></i></button></a>
+
+<div *ngIf="configButton">
+  <h2>Class:{{configButton.class}}</h2>
+  <h2>Name:{{configButton.name}}</h2>
+  <h2>Type:{{configButton.type}}</h2>
+  <h2>Icon:{{configButton.icon}}</h2>
+</div>
