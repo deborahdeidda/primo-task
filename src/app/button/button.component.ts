@@ -4,7 +4,9 @@ import { Button } from './button';
 
 import { FormComponent } from '../form/form.component';
 
-import { ActivatedRoute } from '@angular/router';
+import { Form } from '../form/form';
+
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-button',
@@ -15,16 +17,23 @@ export class ButtonComponent implements OnInit {
 
   title = 'Primo Task: Button'
 
-  @Input() form: FormComponent;
+  @Input() form: Form = {
+    class: '',
+    name: '',
+    type: '',
+    icon: '',
+    href: ''
+  }
 
-   @Input() configButton: Button = {
-    class: 'btn-class',
-    name: 'btn-name',
-    type: 'button',
-    icon: 'fab fa-angular fa-4x'
-  };
+  //  @Input() configButton: Button = {
+  //   class: 'btn-class',
+  //   name: 'btn-name',
+  //   type: 'button',
+  //   icon: 'fab fa-angular fa-4x',
+  //   href: ''
+  // };
 
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

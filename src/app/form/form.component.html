@@ -5,20 +5,31 @@
       <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
         <div class="form-group">
           <label for="class">Class</label>
-          <input [(ngModel)]="form.class" name="class" type="text" class="form-control" id="class" placeholder={{form.class}}>
+          <input [(ngModel)]="form.class" name="class" type="text" class="form-control" id="class" placeholder="class">
         </div><br>
 
         <div class="form-group">
           <label for="name">Name</label>
-          <input [(ngModel)]="form.name" name="name" type="text" class="form-control" id="name" placeholder={{form.name}}>
+          <input [(ngModel)]="form.name" name="name" type="text" class="form-control" id="name" placeholder="name">
         </div><br>
 
         <div class="form-group">
           <label for="type">Type</label>
-          <input [(ngModel)]="form.type" name="type" type="text" class="form-control" id="type" placeholder={{form.type}}>
+          <input [(ngModel)]="form.type" name="type" type="text" class="form-control" id="type" placeholder="type">
         </div><br>
 
-        <a href={{form.href}}><button type=submit class="btn">Send data</button></a>
+        <div class="form-group">
+          <label for="icon">Icon</label>
+          <input [(ngModel)]="form.icon" name="icon" type="text" class="form-control" id="icon" placeholder="icon">
+        </div><br>
+
+        <div class="form-group">
+          <label for="href">Href</label>
+          <input [(ngModel)]="form.href" name="href" type="text" class="form-control" id="href" placeholder="href">
+        </div><br>
+
+        <button type=submit class="btn">Send data</button>
       </form>
 
 </div>
+<app-button [form]="formData"></app-button>

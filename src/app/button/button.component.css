@@ -8,3 +8,13 @@
   cursor: pointer;
   background-color: #A8A8A8;
 }
+.btn-class-yellow{
+  border: none;
+  border-radius: 10px;
+  background-color: #ffdd80;
+}
+.btn-class-yellow:hover{
+  border: none;
+  cursor: pointer;
+  background-color: #fcba03;
+}
