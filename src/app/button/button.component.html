@@ -1,7 +1,7 @@
 <!-- <h1>{{title}}</h1>
 <a href="#"><button class = {{configButton.class}} name = {{configButton.name}} type = {{configButton.type}} ><i class= {{configButton.icon}}></i></button></a> -->
 
-<div *ngIf="form">
+<div *ngIf="form.value">
   <h1>{{title}}</h1>
   <a href= {{form.value.href}}><button class = {{form.value.class}} name = {{form.value.name}} type = {{form.value.type}} ><i class= {{form.value.icon}}></i></button></a>
 </div>

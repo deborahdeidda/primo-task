@@ -25,13 +25,12 @@ export class FormComponent implements OnInit {
     href: ''
   }
 
-  @Output() button: Button;
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // onButtonClick: Form;
   onSubmit(formData: NgForm): void {
     console.log(formData.value)
     this.form.class = formData.value.class
@@ -39,6 +38,7 @@ export class FormComponent implements OnInit {
     this.form.type = formData.value.type
     this.form.icon = formData.value.icon
     this.form.href = formData.value.href
+    // this.onButtonClick = formData;
   }
 
 }
