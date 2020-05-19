@@ -25,7 +25,13 @@ export class ButtonComponent implements OnInit {
   //   href: ''
   // };
 
-  @Input() configButton: Form;
+  @Input() configButton: Form= {
+    class: '',
+    name: '',
+    type: '',
+    icon: '',
+    href: ''
+  };
 
   constructor() { }
 
