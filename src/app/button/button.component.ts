@@ -15,15 +15,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ButtonComponent implements OnInit {
 
-  title = 'Primo Task: Button'
-
-  @Input() form: Form = {
-    class: '',
-    name: '',
-    type: '',
-    icon: '',
-    href: ''
-  }
+  title = 'Primo Task: Button';
 
   //  @Input() configButton: Button = {
   //   class: 'btn-class',
@@ -32,6 +24,8 @@ export class ButtonComponent implements OnInit {
   //   icon: 'fab fa-angular fa-4x',
   //   href: ''
   // };
+
+  @Input() configButton: Form;
 
   constructor() { }
 

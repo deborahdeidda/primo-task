@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Form } from './form';
 
@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
 
   title = 'Primo Task - Form';
 
+  //input fields
   @Input() form: Form = {
     class: '',
     name: '',
@@ -25,20 +26,16 @@ export class FormComponent implements OnInit {
     href: ''
   }
 
+  //listening for an triggered event
+  @Output() newEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // onButtonClick: Form;
   onSubmit(formData: NgForm): void {
-    console.log(formData.value)
-    this.form.class = formData.value.class
-    this.form.name = formData.value.name
-    this.form.type = formData.value.type
-    this.form.icon = formData.value.icon
-    this.form.href = formData.value.href
-    // this.onButtonClick = formData;
+    console.log("Form data:", formData.value)
+    this.newEvent.emit(formData)
   }
-
 }
