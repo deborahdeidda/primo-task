@@ -1,12 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Form } from './form';
 
-import { NgForm } from '@angular/forms';
-
-import { ButtonComponent } from '../button/button.component';
-
 import { Button } from '../button/button';
+
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -17,25 +15,25 @@ export class FormComponent implements OnInit {
 
   title = 'Primo Task - Form';
 
-  //input fields
-  @Input() form: Form = {
+  form: Form = {
     class: '',
     name: '',
     type: '',
     icon: '',
     href: ''
-  }
+  };
 
-  //listening for an triggered event
-  @Output() newEvent = new EventEmitter();
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
+  submitted = false;
   onSubmit(formData: NgForm): void {
-    console.log("Form data:", formData.value)
-    this.newEvent.emit(formData)
+     console.log("Form data:", formData);
+     // console.log("Form:", this.form);
+     // console.log("Button:", this.configButton);
+     // this.form = formData;
+     this.submitted = true;
   }
 }

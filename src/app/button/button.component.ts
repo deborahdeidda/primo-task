@@ -2,12 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Button } from './button';
 
-import { FormComponent } from '../form/form.component';
-
-import { Form } from '../form/form';
-
-import { NgForm } from '@angular/forms';
-
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -25,11 +19,17 @@ export class ButtonComponent implements OnInit {
   //   href: ''
   // };
 
-  @Input() configButton: Button;
+  //button configuration through input form
+  @Input() configButton: Button = {
+    class: 'value',
+    name: 'value',
+    type: 'value',
+    icon: 'value',
+    href: 'value'
+  };
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
