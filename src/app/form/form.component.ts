@@ -23,14 +23,15 @@ export class FormComponent implements OnInit {
     href: ''
   };
 
-  configButton: Button;
-
   constructor() {}
 
   ngOnInit(): void {
   }
 
-  onSubmit(formData: NgForm): void {
-     this.configButton = this.form;
+  submitted = false;
+  onSubmit(data) {
+    this.form = data;
+    this.submitted = true;
   }
+
 }

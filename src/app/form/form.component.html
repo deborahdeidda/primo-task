@@ -2,37 +2,34 @@
 <div class="container">
     <h3>Form</h3>
 
-      <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+      <form #formData="ngForm" (ngSubmit)="onSubmit(formData.value)">
         <div class="form-group">
           <label for="class">Class</label>
-          <input [(ngModel)]="form.class" name="class" type="text" class="form-control" id="class" placeholder="class">
+          <input name="class" type="text" class="form-control" id="class" placeholder="class" ngModel>
         </div><br>
 
         <div class="form-group">
           <label for="name">Name</label>
-          <input [(ngModel)]="form.name" name="name" type="text" class="form-control" id="name" placeholder="name">
+          <input name="name" type="text" class="form-control" id="name" placeholder="name" ngModel>
         </div><br>
 
         <div class="form-group">
           <label for="type">Type</label>
-          <input [(ngModel)]="form.type" name="type" type="text" class="form-control" id="type" placeholder="type">
+          <input name="type" type="text" class="form-control" id="type" placeholder="type" ngModel>
         </div><br>
 
         <div class="form-group">
           <label for="icon">Icon</label>
-          <input [(ngModel)]="form.icon" name="icon" type="text" class="form-control" id="icon" placeholder="icon">
+          <input name="icon" type="text" class="form-control" id="icon" placeholder="icon" ngModel>
         </div><br>
 
         <div class="form-group">
           <label for="href">Href</label>
-          <input [(ngModel)]="form.href" name="href" type="text" class="form-control" id="href" placeholder="href">
+          <input name="href" type="text" class="form-control" id="href" placeholder="href" ngModel>
         </div><br>
 
         <button type=submit class="btn">Send data</button>
       </form>
 
 </div><br>
-<div *ngIf="configButton">
-  <a href = {{configButton.href}}><button class = {{configButton.class}} name = {{configButton.name}} type = {{configButton.type}} ><i class = {{configButton.icon}}></i></button></a>
-</div>
-<!-- <app-button [configButton]="button" *ngIf="submitted"></app-button> -->
+<app-button [configButton]="form" *ngIf="submitted"></app-button>
