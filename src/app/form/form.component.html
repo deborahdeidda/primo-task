@@ -1,6 +1,6 @@
-<h1>{{title}}</h1>
+<h2>{{title}}</h2>
 <div class="container">
-    <h1>Form</h1>
+    <h3>Form</h3>
 
       <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
         <div class="form-group">
@@ -31,5 +31,8 @@
         <button type=submit class="btn">Send data</button>
       </form>
 
+</div><br>
+<div *ngIf="configButton">
+  <a href = {{configButton.href}}><button class = {{configButton.class}} name = {{configButton.name}} type = {{configButton.type}} ><i class = {{configButton.icon}}></i></button></a>
 </div>
-<app-button [configButton]="form" *ngIf="submitted"></app-button>
+<!-- <app-button [configButton]="button" *ngIf="submitted"></app-button> -->

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 import { Form } from './form';
+
+import { Button } from '../button/button';
 
 import { NgForm } from '@angular/forms';
 
@@ -21,14 +23,14 @@ export class FormComponent implements OnInit {
     href: ''
   };
 
+  configButton: Button;
+
   constructor() {}
 
   ngOnInit(): void {
   }
 
-  submitted = false;
   onSubmit(formData: NgForm): void {
-     console.log("Form data:", formData);
-     this.submitted = true;
+     this.configButton = this.form;
   }
 }
