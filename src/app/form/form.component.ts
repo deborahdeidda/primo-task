@@ -2,10 +2,6 @@ import { Component, OnInit, Output } from '@angular/core';
 
 import { Form } from './form';
 
-import { Button } from '../button/button';
-
-import { NgForm } from '@angular/forms';
-
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
