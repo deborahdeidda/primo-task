@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 
-import { Form } from './form';
+import { Button } from '../button/button';
 
 @Component({
   selector: 'app-form',
@@ -11,7 +11,7 @@ export class FormComponent implements OnInit {
 
   title = 'Primo Task - Form';
 
-  form: Form = {
+  inputForm: Button = {
     class: '',
     name: '',
     type: '',
@@ -26,7 +26,11 @@ export class FormComponent implements OnInit {
 
   submitted = false;
   onSubmit(data) {
-    this.form = data;
+    this.inputForm.class = data.class,
+    this.inputForm.name = data.name,
+    this.inputForm.type = data.type,
+    this.inputForm.icon = data.icon,
+    this.inputForm.href = data.href
     this.submitted = true;
   }
 
